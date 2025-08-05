@@ -41,4 +41,7 @@ all fast and slow are using same infra but are independent. slow is pre-trained,
 - sums up to <=1, linear combination of different books with local weighting and add the remaining (1- sum(weights)) from manhattan pricing
 
 
+### Jupyter
+`~/.jupyter/jupyter.py`
+
 borrowing the coin has the same profile as buying spot and shorting perp
