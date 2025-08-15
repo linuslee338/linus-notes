@@ -14,8 +14,8 @@ cd /mnt/wmdata/md/plogs/oe/2025/06/binance/binance-wmpy-execution/cefi-binance-2
 - manual taker fee (x bps) means ignore x bps from mid on both sides of the book
 
 ## DQ
-mm_pnl: pos + dq0
-pnl: pos + dq0 + perp_pospnl + funding + strategies
+- mm_pnl: pos + dq0
+- pnl: pos + dq0 + perp_pospnl + funding + strategies
 
 
 shm/snq (shared memory) to use instead of tcp for risk
@@ -109,3 +109,6 @@ Shift
 - fiat slightly more back in line but still trading above. waiting for eur/gbp on natwest
 - funding good for a bunch of alts incl. pump/ena/fartcoin so can keep an eye
 - lowered ENA perp balance from -10m to -15m cos funding is good
+
+
+

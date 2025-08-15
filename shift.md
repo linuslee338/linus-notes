@@ -18,3 +18,7 @@
 - fiat slightly more back in line but still trading above. waiting for eur/gbp on natwest
 - funding good for a bunch of alts incl. pump/ena/fartcoin so can keep an eye
 - lowered ENA perp balance from -10m to -15m cos funding is good
+
+
+- trading pretty quiet, bunch of unrealised perp_pospnl
+- GAME moggin it

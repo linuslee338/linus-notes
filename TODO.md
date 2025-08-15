@@ -2,13 +2,7 @@
 
 
 # TODO
-- write scripts for morgan + chris
-    - binance (done)
-    - okex
-    - kraken
-    - coinbase (done)
-    - gateio
-
+for funding rate, funding_rate is being updated in db as 0 for all tokens. funding rates is being fetched (but didnt check if the rates are correct).  could also be an issue within write-funding-rate but have not dug deep enough yet
 - setup kucoinperp exchange
 1. fix funding payment
 2. fix funding rate
@@ -22,6 +16,5 @@ i'm trying to figure out how to investigate if we get avoid getting ADL'd on bin
 
 ## Personal stuff
 - write scripts to
-1. start all GUI in 1 tmux terminal
+1. start all GUI in 1 tmux terminal (this is too mafan alr - next step is prob to do it in a tmux terminal, but need to figure out how to do that)
 2. start personal monitoring script (health + relelvant tradeslist) + trading_params + dev_component_gui in separate tmux terminal
-3. write 

@@ -1,6 +1,8 @@
 yfi|knc|dydx|hpo
 
-sui|ada|ltc|Link|avax|aave|near|pepe|fil|xlm|crv|ena|om|wif|apt|rune|trump|dot|jup|hbar|pepe
+10k @ 10bps, 5k @ 10bps
+sui|ada|ltc|Link|avax|aave|near|pepe
+fil|xlm|crv|ena|om|wif|apt|rune|trump|dot|jup|hbar
 
 
 
