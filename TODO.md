@@ -2,10 +2,17 @@
 
 
 # TODO
-for funding rate, funding_rate is being updated in db as 0 for all tokens. funding rates is being fetched (but didnt check if the rates are correct).  could also be an issue within write-funding-rate but have not dug deep enough yet
-- setup kucoinperp exchange
-1. fix funding payment
-2. fix funding rate
+
+- Setup cryptocom
+it will run on cefi-cryptocom-colo-2 (the same vm as spot, make sure names don't clash)
+you have an api key at ~/keys/ccomsg_trading.key, let me know if it doesn't work or you need more keys
+i have sent funds from fb, any of the guys can send more if you want more to test
+set up balance (main + per subacc)
+check md/exe/dropcopy, once the devs have it ready (they will need a few weeks +)
+set up premiums+risks (monitored now, get me to check the configs)
+funding fetcher + funding payment fetcher
+aggregators
+EEs + UTs (once devs done with exec)
 
 - ADL Script
 i'm trying to figure out how to investigate if we get avoid getting ADL'd on binance by transferring tokens to different subaccounts on binance, because the criteria to get ADL'd is from unrealised PnL and we can potentially get around this if transferring tokens to different sub-accounts resets the unrealised PnL.
