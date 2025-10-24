@@ -94,6 +94,8 @@ bid_max caps the skew, then applies credit to it
 MAB caps the (skew + credit)
 
 
+
+
 # Shift
 bitfinex non-crypto e.g. fiats are j stuck there
 set ee_min_bps for gbp/eur
@@ -112,3 +114,10 @@ Shift
 
 
 
+
+- cro trading was poor in the morning, added okex ees, removed all ees extra credit, added extra tob ut lvl with skew to help hedge faster. qing helped to add okexperp and okex into pricing which helped to stop the bleeding.
+- trying to wd pyth from lmax to get more inv as funding was rly -ve, pending their wl. refer to lmax slack channel
+- minted another 10m usd1, need to manually adjust theo + zp
+- sol pospnl horrendous tdy, think we are too tight on defi for infinite size. cant hedge out fast enough. adi widened out a little on defi, but can monitor whether the deltas are ok for the credit we are charging
+- xtz pos from yest hedged out, but rh hitting us with more clips. qing helped to change fisherman credit multiplier decay but can watch if we're charging enough
+- stg -> zro conversion open, not sure until when. sold alm all our stg inventory by doing the arb selling stg and buying zro. 

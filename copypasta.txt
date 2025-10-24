@@ -1,9 +1,24 @@
-yfi|knc|dydx|hpo
-
-10k @ 10bps, 5k @ 10bps
-sui|ada|ltc|Link|avax|aave|near|pepe
-fil|xlm|crv|ena|om|wif|apt|rune|trump|dot|jup|hbar
+yfi|knc|dydx|hpo|cro|bas|swell|linea|aster|stbl
 
 
+new tokens:
+^ape$|^aster$|^babydoge$|^band$|^bas$|^bat$|^br$|^doge$|^dydx$|^mew$|^paws$|^pepecoin$|^stbl$|^taiko$|^taikobsc$
+
+i've implemented a component (adl defender) to move our positions to desk 9 and back immediately on binancefutures to reduce our unrealized pnl. This lowers our adl queue priority and reduces the chance of ADL. Technical details in the thread.
 
 
+for each desk (1 till 9)
+we get all symbols excluding majors (btc,eth,sol,xrp,bnb) and 
+1. filter if the unrealized pnl > 10k + unrealized_pnl/notional > 0.05
+2. sort by adl_quartile, pnl_percentage and pick the top 10
+3. clamp quantity by a max notional of 5M per symbol (configurable) and cur_lev_max_pos on desk 9
+4. check risk that desk 9 has enough margin to support the list of symbols and add symbols till risk check is not met
+5. risk is configured such that after the move, the margin level > 0.1 so in the worst case, we will have a 10% buffer on price moves
+6. margin is calculated by the exact same way the binancefutures balance v4 does it
+
+other details:
+1. if the first transfer leg fails (e.g. because we made a trade), will just skip that desk and will retry again in the next loop
+2. if the second transfer leg fails, component will be killed because we expect that position should always be able to be moved back
+3. cases when the transfer desk also holds some position is considered
+4. api only reduces positions, so we can never open positions by transferring between sub-accounts
+5. desk 8 is transfer desk for desk 9 (8 and 9 are chosen because they have the largest margin)
