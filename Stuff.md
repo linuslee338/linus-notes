@@ -121,3 +121,24 @@ Shift
 - sol pospnl horrendous tdy, think we are too tight on defi for infinite size. cant hedge out fast enough. adi widened out a little on defi, but can monitor whether the deltas are ok for the credit we are charging
 - xtz pos from yest hedged out, but rh hitting us with more clips. qing helped to change fisherman credit multiplier decay but can watch if we're charging enough
 - stg -> zro conversion open, not sure until when. sold alm all our stg inventory by doing the arb selling stg and buying zro. 
+
+
+# Order transition
+class WMPYEXEOrderEventType(enum.Enum):
+    NONE = 0
+
+    NEW = 4
+
+    NEW_ACK = 5
+
+    NEW_REJECT = 134
+
+    CANCEL = 8
+
+    CANCEL_ACK = 9
+
+    CANCEL_REJECT = 138
+
+    FILL = 176
+
+    PARTIAL_FILL = 32

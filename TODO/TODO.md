@@ -25,12 +25,14 @@ funding fetcher + funding payment fetcher
 aggregators
 EEs + UTs (once devs done with exec)
 
-## ADL Script
-i'm trying to figure out how to investigate if we get avoid getting ADL'd on binance by transferring tokens to different subaccounts on binance, because the criteria to get ADL'd is from unrealised PnL and we can potentially get around this if transferring tokens to different sub-accounts resets the unrealised PnL.
-
-1. get balance for some random token from api (which should have UnPnL that is not 0)
-2. move token to separate desk
-3. check whether unrealise pnl got reset   
+## Setup Gateioperp 
+- balance
+- execution
+- skews (position, sawtooth, premium)
+- risk
+- mdq
+- funding fetcher
+- lev monitor (oi + lev)
 
 ## Personal stuff
 

@@ -2,7 +2,7 @@ yfi|knc|dydx|hpo|cro|bas|swell|linea|aster|stbl
 
 
 new tokens:
-^ape$|^aster$|^babydoge$|^band$|^bas$|^bat$|^br$|^doge$|^dydx$|^mew$|^paws$|^pepecoin$|^stbl$|^taiko$|^taikobsc$
+^ach$|^ape$|^aster$|^babydoge$|^band$|^bas$|^bat$|^br$|^broccoli$|^doge$|^dydx$|^jto$|^layer$|^mew$|^paws$|^pepecoin$|^stbl$|^taiko$|^taikobsc$|^THQ$|^ZIL$
 
 i've implemented a component (adl defender) to move our positions to desk 9 and back immediately on binancefutures to reduce our unrealized pnl. This lowers our adl queue priority and reduces the chance of ADL. Technical details in the thread.
 
@@ -22,3 +22,11 @@ other details:
 3. cases when the transfer desk also holds some position is considered
 4. api only reduces positions, so we can never open positions by transferring between sub-accounts
 5. desk 8 is transfer desk for desk 9 (8 and 9 are chosen because they have the largest margin)
+
+
+noticed that cryptocomperp mdq has been consistently bad (and the dq decay is considerably worse than the other exchanges). after some investigation, it seems that someone is able to do insanely fast arb between binanceperp and ccomperp (both in tokyo)
+
+one noticeable example is during the SOL tick today at around 02:05 (consisting of multiple paythroughs). in all these cases, in exchange timestamp, the binancefutures trades happen before the cryptocomperp ones but we receive both of the trades at around the same time.
+i suspect that there are people who are able to shoot on ccomperp almost immediately after takethroughs on binancefutures.
+our theos are slow to update because it seems it takes a while for us to receive trades update from binancefutures (2-3ms in this example between exchange ts and our rcv time)
+in addition, ccomperp also has pretty good exchange latency (mean ~ 600-700 micros round trip) so it might be possible that someone else gets md from binancefutures faster and place orders on ccomperp
