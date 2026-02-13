@@ -2,7 +2,7 @@ yfi|knc|dydx|hpo|cro|bas|swell|linea|aster|stbl
 
 
 new tokens:
-^ach$|^ape$|^aster$|^babydoge$|^band$|^bas$|^bat$|^br$|^broccoli$|^doge$|^dydx$|^jto$|^layer$|^mew$|^paws$|^pepecoin$|^stbl$|^taiko$|^taikobsc$|^THQ$|^ZIL$
+^ach$|^ape$|^aster$|^babydoge$|^band$|^bas$|^bat$|^br$|^broccoli$|^doge$|^dydx$|^jto$|^layer$|^lit$|^mew$|^paws$|^pepecoin$|^stbl$|^taiko$|^taikobsc$|^THQ$|^ZIL$|^MNT$
 
 i've implemented a component (adl defender) to move our positions to desk 9 and back immediately on binancefutures to reduce our unrealized pnl. This lowers our adl queue priority and reduces the chance of ADL. Technical details in the thread.
 
